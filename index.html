@@ -15,7 +15,129 @@
     />
     <title>Food of the Month</title>
   </head>
+
   <body>
+    <div id="header">
+      <div id="logo_area"></div>
+      <div id="profilePage_area"></div>
+    </div>
+
+    <div id="container">
+      <article>
+        <section id="mainContainer">
+          <div id="mainTitle">Food of the Month</div>
+          <div id="subTitle">이달의 식재료 알아보기</div>
+          <form id="searchForm">
+            <div id="year">
+              <label id="data">년</label>
+              <div id="dropDown"></div>
+            </div>
+            <div id="month">
+              <label id="data">월</label>
+              <div id="dropDown"></div>
+            </div>
+          </form>
+        </section>
+
+        <section id="foodContainer">
+          <hr id="mainLine" />
+          <div id="mainTitle">
+            <text>2023년 10월</text>
+            <hr id="titleLine" />
+          </div>
+          <div id="food">
+            <div id="foodSubTitle">식재료</div>
+            <div id="foods">
+              <div id="arrow"></div>
+              <div id="foodPic"></div>
+              <div id="arrow"></div>
+            </div>
+            <hr id="basicLine" />
+            <div id="foodSubTitle">깻잎</div>
+          </div>
+          <div id="foodRecipe">
+            <div id="foodSubTitle">레시피</div>
+            <div id="cards">
+              <div id="card">
+                <img id="recipePic" />
+                <div id="recipeTitle">깻잎소스감자범벅</div>
+              </div>
+              <div id="card">
+                <img id="recipePic" />
+                <div id="recipeTitle">깻잎소스감자범벅</div>
+              </div>
+              <div id="card">
+                <img id="recipePic" />
+                <div id="recipeTitle">깻잎소스감자범벅</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="recipeContainer">
+          <div id="mainTitle">
+            <text>깻잎소스감자범벅</text>
+            <hr id="titleLine" />
+          </div>
+          <div id="recipePics">
+            <img id="mainRecipePic" />
+            <div id="subRecipePic"></div>
+          </div>
+          <div id="recipes">
+            <div id="stuff">
+              <div id="foodSubTitle">재료</div>
+              <hr id="basicLine" />
+              <p>(3인분)</p>
+              <p>
+                주재료 : 알감자(10개), 달걀(2개) 부재료 : 식초(1T), 소금(1t)
+                깻잎소스 : 깻잎(20장), 잣(2T), 파르메산 치즈가루(4T),
+                올리브유(½컵), 소금(¼t), 후춧가루(¼t)
+              </p>
+            </div>
+            <div id="method">
+              <div id="foodSubTitle">만드는 법</div>
+              <hr id="basicPlusLine1" />
+              <p>
+                1. 깻잎은 깨끗이 씻어 큼직하게 썰고, 감자는 필러로 껍질을
+                벗긴다. 2. 김이 오른 찜기에 감자를 15분간 찐다. 3. 냄비에
+                물(4컵)과 식초(1T), 소금(1t), 달걀(2개)을 넣어 10분간 삶은 뒤
+                껍질을 벗긴다. 4. 믹서에 깻잎소스 재료를 넣고 곱게 간 뒤 감자와
+                달걀에 버무린다.
+              </p>
+            </div>
+          </div>
+          <div id="nutrient">
+            <div id="foodSubTitle">영양성분(1인분)</div>
+            <hr id="basicPlusLine2" />
+            <table>
+              <thead>
+                <tr>
+                  <th>에너지 (kcal)</th>
+                  <th>탄수화물 (g)</th>
+                  <th>지질 (g)</th>
+                  <th>단백질 (g)</th>
+                  <th>식이섬유 (g)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>331.2</td>
+                  <td>331.2</td>
+                  <td>331.2</td>
+                  <td>331.2</td>
+                  <td>331.2</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </article>
+    </div>
+
+    <div id="footer">
+      <div id="profile_area"></div>
+      <div id="profilePage_area"></div>
+    </div>
     <!-- <script src="scripts/main.js"></script> -->
   </body>
 </html>
