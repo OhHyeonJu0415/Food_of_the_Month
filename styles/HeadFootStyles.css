@@ -2,7 +2,7 @@
 #footer {
   height: 150px;
   background-color: var(--color-main);
-  padding: 0 200px;
+  padding: 0 14vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,7 +41,7 @@
 
 #footer {
   height: 170px;
-  margin-top: 200px;
+
   color: #fff;
   font-size: 14px;
   line-height: 150%;
