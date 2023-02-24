@@ -63,7 +63,7 @@
         <section id="mainContainer">
           <img id="mainPic" src="/images/mainPic.png" alt="mainImage" />
           <div>
-            <div id="mainTitle">Food of the<br />Month</div>
+            <div id="mainTitle1">Food of the<br />Month</div>
             <div id="subTitle">이달의 식재료 알아보기</div>
             <form id="searchForm">
               <div id="year">
@@ -74,7 +74,7 @@
                     arrow_drop_down
                   </span>
                 </div>
-                <div id="line"></div>
+                <div class="line day"></div>
               </div>
               <div id="month">
                 <label>월</label>
@@ -84,42 +84,52 @@
                     arrow_drop_down
                   </span>
                 </div>
-                <div id="line"></div>
+                <div class="line day"></div>
               </div>
             </form>
           </div>
         </section>
 
+        <div class="line boldLine"></div>
+
         <section id="foodContainer">
-          <hr id="mainLine" />
           <div id="mainTitle">
-            <text>2023년 10월</text>
-            <hr id="titleLine" />
+            <span>2023년 10월</span>
+            <div class="line title"></div>
           </div>
-          <div id="food">
-            <div id="foodSubTitle">식재료</div>
-            <div id="foods">
-              <div id="arrow"></div>
-              <div id="foodPic"></div>
-              <div id="arrow"></div>
+          <div>
+            <div id="food">
+              <div id="foodSubTitle">식재료</div>
+
+              <div id="foods">
+                <span class="material-symbols-outlined cursor-point">
+                  keyboard_double_arrow_left
+                </span>
+                <div id="foodPic"></div>
+                <span class="material-symbols-outlined cursor-point">
+                  keyboard_double_arrow_right
+                </span>
+              </div>
+
+              <div class="line basic"></div>
+              <div id="foodSubTitle">깻잎</div>
             </div>
-            <hr id="basicLine" />
-            <div id="foodSubTitle">깻잎</div>
-          </div>
-          <div id="foodRecipe">
-            <div id="foodSubTitle">레시피</div>
-            <div id="cards">
-              <div id="card">
-                <img id="recipePic" />
-                <div id="recipeTitle">깻잎소스감자범벅</div>
-              </div>
-              <div id="card">
-                <img id="recipePic" />
-                <div id="recipeTitle">깻잎소스감자범벅</div>
-              </div>
-              <div id="card">
-                <img id="recipePic" />
-                <div id="recipeTitle">깻잎소스감자범벅</div>
+
+            <div id="foodRecipe">
+              <div id="foodSubTitle">레시피</div>
+              <div id="cards">
+                <div id="card">
+                  <img id="recipePic" />
+                  <div id="recipeTitle">깻잎소스감자범fdsfdsdfdfsdfdf</div>
+                </div>
+                <div id="card">
+                  <img id="recipePic" />
+                  <div id="recipeTitle">깻잎소스감자범벅</div>
+                </div>
+                <div id="card">
+                  <img id="recipePic" />
+                  <div id="recipeTitle">깻잎소스감자범벅</div>
+                </div>
               </div>
             </div>
           </div>
@@ -185,6 +195,7 @@
       </article>
     </div>
 
+    <div class="line lineSpace"></div>
     <div id="footer">
       <div id="profile_area">
         <p>Dong-A University Department of Computer Engineering</p>

@@ -1,3 +1,4 @@
+/* section1 */
 #mainContainer {
   width: 100%;
   height: calc(100vh - 150px);
@@ -7,7 +8,7 @@
 }
 
 #mainContainer > div {
-  padding-left: 200px;
+  padding-left: 14vw;
 }
 
 #mainPic {
@@ -18,7 +19,7 @@
   /* padding-right: 200px; */
 }
 
-#mainContainer > div > #mainTitle {
+#mainTitle1 {
   position: relative;
   z-index: 1;
   font-size: 5.8vw;
@@ -66,10 +67,114 @@
   font-size: 24px;
 }
 
-#line {
-  position: absolute;
-  bottom: 0;
+.line {
   width: 100%;
   background-color: var(--color-point);
+  height: 10px;
+}
+
+.day {
+  position: absolute;
+  bottom: 0;
   height: 3px;
+}
+
+.boldLine {
+  height: 20px;
+}
+
+.lineSpace {
+  margin-top: 200px;
+}
+
+/* section2 */
+#foodContainer {
+  padding: 80px 14vw 10vw 14vw;
+}
+
+#mainTitle {
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 80px;
+}
+
+.title {
+  margin-top: 16px;
+  width: 94px;
+}
+
+.basic {
+  margin: auto;
+  margin-bottom: 14px;
+  width: 70px;
+  height: 6px;
+}
+
+#mainTitle + div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#foodSubTitle {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+#food,
+#foodRecipe {
+  text-align: center;
+}
+
+#foods {
+  display: flex;
+  margin: 40px auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.cursor-point {
+  cursor: pointer;
+}
+
+#foodPic {
+  width: 16vw;
+  height: 16vw;
+  margin: 0 50px;
+  border-radius: 50%;
+  background-color: rgb(230, 230, 230);
+  border: 5px var(--color-main) solid;
+  overflow: hidden;
+}
+
+#cards {
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40vw;
+}
+
+#card {
+  width: 30%;
+  height: 16vw;
+  border-radius: 20px;
+  border: 1px solid var(--color-card-border);
+  box-shadow: 2px 4px 10px var(--color-card-border);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#recipePic {
+  margin: 7% 0;
+  width: 86%;
+  height: 70%;
+  /* border: none; */
+  border-radius: 20px;
+  background-color: rgb(230, 230, 230);
+}
+
+/* section3 */
+#recipeContainer {
+  padding: 0 14vw;
 }
