@@ -29,13 +29,18 @@
   color: #fff;
 }
 
+#profileLink {
+  margin-top: 8px;
+  display: inline-block;
+}
+
 #profilePage_area > li > a > img,
 .material-symbols-outlined {
   width: 24px;
-  margin-bottom: 8px;
 }
 
 #footer {
+  height: 170px;
   margin-top: 200px;
   color: #fff;
   font-size: 14px;
