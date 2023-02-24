@@ -1,0 +1,37 @@
+#header {
+  /* width: 100%; */
+  /* width: 100vw; */
+  height: 150px;
+  background-color: var(--color-main);
+  padding: 0 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo_area {
+  width: 88px;
+  height: 88px;
+}
+
+#profilePage_area {
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+#profilePage_area > li,
+#profilePage_area > li > a {
+  width: 36px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+#profilePage_area > li > a > img,
+.material-symbols-outlined {
+  width: 24px;
+  margin-bottom: 8px;
+}
