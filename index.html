@@ -7,6 +7,7 @@
     <link href="styles/style.css" rel="stylesheet" type="text/css" />
     <link href="styles/common.css" rel="stylesheet" type="text/css" />
     <link href="styles/reset.css" rel="stylesheet" type="text/css" />
+    <link href="styles/bodyStyles.css" rel="stylesheet" type="text/css" />
     <link href="styles/HeadFootStyles.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,7 +34,7 @@
             target="_blank"
           >
             <img src="/images/github-mark-white.svg" alt="Git logo" />
-            <span>Git</span>
+            <span id="profileLink">Git</span>
           </a>
         </li>
         <li>
@@ -45,13 +46,13 @@
               alt="Notion app logo"
               src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png"
             />
-            <span>Notion</span>
+            <span id="profileLink">Notion</span>
           </a>
         </li>
         <li>
           <a href="mailto:guswn2209@gmail.com" target="_blank">
             <span class="material-symbols-outlined"> mail </span>
-            <span>Mail</span>
+            <span id="profileLink">Mail</span>
           </a>
         </li>
       </ul>
@@ -60,18 +61,33 @@
     <div id="container">
       <article>
         <section id="mainContainer">
-          <div id="mainTitle">Food of the Month</div>
-          <div id="subTitle">이달의 식재료 알아보기</div>
-          <form id="searchForm">
-            <div id="year">
-              <label id="data">년</label>
-              <div id="dropDown"></div>
-            </div>
-            <div id="month">
-              <label id="data">월</label>
-              <div id="dropDown"></div>
-            </div>
-          </form>
+          <img id="mainPic" src="/images/mainPic.png" alt="mainImage" />
+          <div>
+            <div id="mainTitle">Food of the<br />Month</div>
+            <div id="subTitle">이달의 식재료 알아보기</div>
+            <form id="searchForm">
+              <div id="year">
+                <label>년도</label>
+                <div id="dropDown">
+                  <b>2023</b>
+                  <span class="material-symbols-outlined">
+                    arrow_drop_down
+                  </span>
+                </div>
+                <div id="line"></div>
+              </div>
+              <div id="month">
+                <label>월</label>
+                <div id="dropDown">
+                  <b>10</b>
+                  <span class="material-symbols-outlined">
+                    arrow_drop_down
+                  </span>
+                </div>
+                <div id="line"></div>
+              </div>
+            </form>
+          </div>
         </section>
 
         <section id="foodContainer">

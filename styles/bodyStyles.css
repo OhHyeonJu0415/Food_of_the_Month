@@ -1,0 +1,75 @@
+#mainContainer {
+  width: 100%;
+  height: calc(100vh - 150px);
+  background-color: var(--color-main);
+  color: #fff;
+  position: relative;
+}
+
+#mainContainer > div {
+  padding-left: 200px;
+}
+
+#mainPic {
+  z-index: 0;
+  position: absolute;
+  height: 57vh;
+  right: 0;
+  /* padding-right: 200px; */
+}
+
+#mainContainer > div > #mainTitle {
+  position: relative;
+  z-index: 1;
+  font-size: 5.8vw;
+  font-weight: 900;
+  padding-top: 10vh;
+  padding-bottom: 5vh;
+}
+
+#subTitle {
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
+  font-size: 2vw;
+}
+
+#searchForm {
+  display: flex;
+  margin-top: 10vh;
+  font-weight: 400;
+}
+
+#year,
+#month {
+  position: relative;
+  cursor: pointer;
+}
+
+#year {
+  width: 100px;
+  margin-right: 60px;
+}
+
+#month {
+  width: 72px;
+}
+
+#dropDown {
+  position: relative;
+  margin-top: 1vh;
+  width: 100%;
+  height: 46px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+}
+
+#line {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color-point);
+  height: 3px;
+}
