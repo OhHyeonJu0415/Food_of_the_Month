@@ -14,8 +14,10 @@
 #mainPic {
   z-index: 0;
   position: absolute;
-  height: 57vh;
+  /* height: 57vh; */
+  width: 63vw;
   right: 0;
+  /* bottom: 16vw; */
   /* padding-right: 200px; */
 }
 
@@ -24,8 +26,10 @@
   z-index: 1;
   font-size: 5.8vw;
   font-weight: 900;
-  padding-top: 10vh;
-  padding-bottom: 5vh;
+  /* padding-top: 10vh; */
+  padding-top: 6.2vw;
+  /* padding-bottom: 5vh; */
+  padding-bottom: 3.1vw;
 }
 
 #subTitle {
@@ -37,7 +41,8 @@
 
 #searchForm {
   display: flex;
-  margin-top: 10vh;
+  /* margin-top: 10vh; */
+  margin-top: 6.2vw;
   font-weight: 400;
 }
 
@@ -58,7 +63,8 @@
 
 #dropDown {
   position: relative;
-  margin-top: 1vh;
+  /* margin-top: 1vh; */
+  margin-top: 0.62vw;
   width: 100%;
   height: 46px;
   display: flex;
@@ -84,7 +90,7 @@
 }
 
 .lineSpace {
-  margin-top: 200px;
+  margin-top: 13vw;
 }
 
 /* section2 */
@@ -110,7 +116,7 @@
   height: 6px;
 }
 
-#mainTitle + div {
+#foodSubContainer {
   display: flex;
   justify-content: space-between;
 }
@@ -169,12 +175,103 @@
   margin: 7% 0;
   width: 86%;
   height: 70%;
-  /* border: none; */
   border-radius: 20px;
   background-color: rgb(230, 230, 230);
+}
+
+#recipeTitle {
+  width: 86%;
+  margin: auto;
 }
 
 /* section3 */
 #recipeContainer {
   padding: 0 14vw;
+}
+
+#recipeSubContainer {
+  display: flex;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+#recipePics {
+  width: 40vw;
+  height: 25vw;
+  margin-bottom: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+#mainRecipePic {
+  width: 100%;
+  /* background-color: aquamarine; */
+  height: 80%;
+}
+
+#subRecipePic {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 13%;
+  white-space: nowrap;
+  overflow: auto;
+  overflow-y: hidden;
+}
+
+#subRecipePic::-webkit-scrollbar {
+  display: none;
+}
+
+#subRecipePic > div {
+  height: 100%;
+  background-color: rgb(220, 220, 220);
+  width: 15%;
+  display: inline-block;
+  margin-right: 2%;
+  border-radius: 10px;
+}
+
+#recipes {
+  margin-left: 100px;
+}
+
+.lineFood {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  width: 70px;
+  height: 6px;
+}
+
+.lineWidth {
+  width: 100px;
+}
+
+.lineWidth1 {
+  width: 170px;
+}
+
+#stuff {
+  /* margin-bottom: 10vh; */
+  margin-bottom: 6.2vw;
+}
+
+#nutrientTable {
+  width: 80%;
+  text-align: center;
+  border-collapse: collapse;
+  border-radius: 10px;
+  border-style: hidden;
+  box-shadow: 0 0 0 1px var(--color-table-border);
+}
+
+tbody > tr {
+  border-top: 1px solid var(--color-table-border);
+}
+
+th,
+td {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  border-right: 1px solid var(--color-table-border);
 }
