@@ -5,9 +5,6 @@
   background-color: var(--color-main);
   color: #fff;
   position: relative;
-  /* display: flex;
-
-  align-items: center; */
 }
 
 #mainContainer > div {
@@ -34,21 +31,24 @@
   /* padding-top: 10vh; */
   padding-top: 3vw;
   /* padding-bottom: 5vh; */
-  padding-bottom: 3.1vw;
+  padding-bottom: 2.8vw;
 }
 
 #subTitle {
+  /* padding-top: 3vw; */
   position: relative;
   z-index: 1;
   font-weight: 400;
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 
 #searchForm {
+  position: relative;
   display: flex;
   /* margin-top: 10vh; */
-  margin-top: 6.2vw;
+  margin-top: 4vw;
   font-weight: 400;
+  z-index: 5;
 }
 
 #year,
