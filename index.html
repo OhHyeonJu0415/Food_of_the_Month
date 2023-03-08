@@ -4,13 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="styles/style.css" rel="stylesheet" type="text/css" />
     <link href="styles/common.css" rel="stylesheet" type="text/css" />
     <link href="styles/reset.css" rel="stylesheet" type="text/css" />
     <link href="styles/bodyStyles.css" rel="stylesheet" type="text/css" />
     <link href="styles/HeadFootStyles.css" rel="stylesheet" type="text/css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,6 +18,57 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
     />
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- 농사로 공공데이터 API -->
+    <script
+      type="text/javascript"
+      src="http://api.nongsaro.go.kr/js/framework.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://api.nongsaro.go.kr/js/openapi_nongsaro.js"
+    ></script>
+
+    <script type="text/javascript">
+      nongsaroOpenApiRequest.apiKey = "202303061MOHKXNQUQY72RTDRDBJGA"; //변경할 부분 1 : 발급 받은 인증키
+      nongsaroOpenApiRequest.serviceName = "monthFd";
+      nongsaroOpenApiRequest.operationName = "monthFdYearLst";
+      var dt = new Date();
+      nongsaroOpenApiRequest.thisYear = itoStr(dt.getFullYear()); //초기값 현재년도 셋팅
+      nongsaroOpenApiRequest.thisMonth = itoStr(dt.getMonth() + 1); //초기값 현재월 셋팅
+      nongsaroOpenApiRequest.htmlArea = "nongsaroApiLoadingArea";
+      nongsaroOpenApiRequest.callback = "/ajax_local_callback.jsp"; //크로스 도메인 처리를 위한 콜백페이지
+
+      function itoStr($num) {
+        $num < 10 ? ($num = "0" + $num) : $num;
+        return $num.toString();
+      }
+
+      const params = {
+        apiKey: "202303061MOHKXNQUQY72RTDRDBJGA",
+        thisYear: "2015",
+        thisMonth: "10",
+      };
+
+      // ajax 통신
+      $.ajax({
+        type: "GET",
+        url: "https://cors-anywhere.herokuapp.com/http://api.nongsaro.go.kr/service/monthFd/monthFdmtLst",
+        data: params, // Json 형식의 데이터이다.
+        success: function (res) {
+          console.log(res);
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+          console.log("통신실패");
+        },
+      });
+    </script>
+
     <title>Food of the Month</title>
   </head>
 
@@ -69,7 +117,7 @@
               <div id="year">
                 <label>년도</label>
                 <div id="dropDown">
-                  <b>2023</b>
+                  <b>2020</b>
                   <span class="material-symbols-outlined">
                     arrow_drop_down
                   </span>
@@ -79,9 +127,6 @@
                     <span>2018</span>
                     <span>2019</span>
                     <span>2020</span>
-                    <span>2021</span>
-                    <span>2022</span>
-                    <span>2023</span>
                   </div>
                 </div>
                 <div class="line day"></div>
