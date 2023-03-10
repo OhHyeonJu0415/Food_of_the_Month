@@ -35,6 +35,7 @@
   <body>
     <div id="header">
       <img id="logo_area" src="/images/logo.png" alt="logo" />
+
       <ul id="profilePage_area">
         <li>
           <a
@@ -71,7 +72,9 @@
         <section id="mainContainer">
           <img id="mainPic" src="/images/mainPic.png" alt="mainImage" />
           <div>
-            <div id="mainTitle1">Food of the<br />Month</div>
+            <div id="mainTitle1">
+              <span>Food of the</span> <span> Month</span>
+            </div>
             <div id="subTitle">이달의 식재료 알아보기</div>
             <form id="searchForm">
               <div id="year">
@@ -81,12 +84,17 @@
                   <span class="material-symbols-outlined">
                     arrow_drop_down
                   </span>
-                  <div id="menu">
-                    <span>2016</span>
-                    <span>2017</span>
-                    <span>2018</span>
-                    <span>2019</span>
-                    <span>2020</span>
+                  <div class="menu menuYear">
+                    <div>
+                      <span>2015</span>
+                      <span>2016</span>
+                      <span>2017</span>
+                    </div>
+                    <div>
+                      <span>2018</span>
+                      <span>2019</span>
+                      <span>2020</span>
+                    </div>
                   </div>
                 </div>
                 <div class="line day"></div>
@@ -94,23 +102,27 @@
               <div id="month">
                 <label>월</label>
                 <div id="dropDown">
-                  <b>10</b>
+                  <b>1</b>
                   <span class="material-symbols-outlined">
                     arrow_drop_down
                   </span>
-                  <div id="menu">
-                    <span>1</span>
-                    <span>2</span>
-                    <span>3</span>
-                    <span>4</span>
-                    <span>5</span>
-                    <span>6</span>
-                    <span>7</span>
-                    <span>8</span>
-                    <span>9</span>
-                    <span>10</span>
-                    <span>11</span>
-                    <span>12</span>
+                  <div class="menu menuMonth">
+                    <div>
+                      <span>1</span>
+                      <span>2</span>
+                      <span>3</span>
+                      <span>4</span>
+                      <span>5</span>
+                      <span>6</span>
+                    </div>
+                    <div>
+                      <span>7</span>
+                      <span>8</span>
+                      <span>9</span>
+                      <span>10</span>
+                      <span>11</span>
+                      <span>12</span>
+                    </div>
                   </div>
                 </div>
                 <div class="line day"></div>
@@ -119,7 +131,7 @@
           </div>
         </section>
 
-        <div class="line boldLine"></div>
+        <!-- <div class="line boldLine"></div>
 
         <section id="foodContainer">
           <div id="mainTitle">
@@ -240,12 +252,12 @@
               </div>
             </div>
           </div>
-        </section>
+        </section> -->
       </article>
     </div>
 
-    <div class="line lineSpace"></div>
-    <div id="footer">
+    <!-- <div class="line lineSpace"></div> -->
+    <!-- <div id="footer">
       <div id="profile_area">
         <p>Dong-A University Department of Computer Engineering</p>
         <pre>
@@ -282,7 +294,7 @@ OhHyeonJu
           </a>
         </li>
       </ul>
-    </div>
+    </div> -->
     <script src="./scripts/index.js" type="module"></script>
   </body>
 </html>
