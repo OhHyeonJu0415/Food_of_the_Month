@@ -148,6 +148,7 @@
   position: absolute;
   bottom: 0;
   cursor: pointer;
+  display: block;
 }
 
 .infoIcon:hover::after {
@@ -161,8 +162,17 @@
   padding: 10px 15px;
   color: var(--color-main);
   border-radius: 10px;
-  /* width: 50%;
-  height: 50%; */
+}
+
+.searchButton {
+  background-color: var(--color-main);
+  padding: 5px 20px;
+  border: 1px solid var(--color-card-border);
+  border-radius: 10px;
+  color: #fff;
+  margin-top: 2vw;
+  font-family: "Noto Sans KR", sans-serif;
+  cursor: pointer;
 }
 
 .boldLine {
@@ -285,7 +295,6 @@
 
 #mainRecipePic {
   width: 100%;
-  /* background-color: aquamarine; */
   height: 80%;
 }
 
@@ -332,7 +341,6 @@
 }
 
 #stuff {
-  /* margin-bottom: 10vh; */
   margin-bottom: 6.2vw;
 }
 
