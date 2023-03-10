@@ -97,7 +97,7 @@
 }
 
 .menu > div {
-  color: black;
+  color: var(--color-main);
   display: flex;
 }
 
@@ -106,6 +106,10 @@
   flex: 1;
   padding: 15px 0;
   border-right: 1px solid var(--color-card-border);
+}
+
+.menu > div > span:hover {
+  font-weight: 900;
 }
 
 .menu > div > span:last-child {
@@ -132,6 +136,33 @@
   position: absolute;
   bottom: 0;
   height: 3px;
+}
+
+.dateAlert {
+  margin-left: 3%;
+  position: relative;
+}
+
+.infoIcon {
+  color: var(--color-card-border);
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.infoIcon:hover::after {
+  content: "2015년부터 2020년까지 검색 가능합니다";
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1rem;
+  background-color: #fff;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  padding: 10px 15px;
+  color: var(--color-main);
+  border-radius: 10px;
+  /* width: 50%;
+  height: 50%; */
 }
 
 .boldLine {
