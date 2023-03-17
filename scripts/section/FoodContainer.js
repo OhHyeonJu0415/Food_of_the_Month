@@ -1,4 +1,5 @@
 import Ingredients from "../component/Food/Ingredients.js";
+import { setPath } from "../component/Food/SetPath.js";
 
 class FoodContainer {
   constructor($container, $data, $year, $month) {
@@ -11,12 +12,7 @@ class FoodContainer {
 
   render() {
     const ingredients = new Ingredients();
-    const imagePath = [
-      "../../images/mainPic.png",
-      "../../images/logo.png",
-      "../../images/test1.jpg",
-    ];
-    const title = ["테스트1", "테스트2", "테스트3"];
+    const path = setPath();
     const root = document.querySelector("#foodContainer");
     const line = document.getElementsByClassName("boldLine");
     const date = document.getElementById("foodDate");
@@ -28,20 +24,19 @@ class FoodContainer {
     date.innerText = `${this.$year}년 ${this.$month}월`;
 
     //첫번째 음식 사진으로 초기화
-    ingredients.render(imagePath[this.path], title[this.path]);
-    // this.setIngredients(imagePath);
+    ingredients.render(path[this.path].image, path[this.path].title);
 
     const leftArrow = document.getElementById("leftArrow");
     const rightArrow = document.getElementById("rightArrow");
 
     leftArrow.addEventListener("click", () => {
       if (this.path > 0) this.path = this.path - 1;
-      ingredients.render(imagePath[this.path], title[this.path]);
+      ingredients.render(path[this.path].image, path[this.path].title);
     });
 
     rightArrow.addEventListener("click", () => {
-      if (this.path < imagePath.length - 1) this.path = this.path + 1;
-      ingredients.render(imagePath[this.path], title[this.path]);
+      if (this.path < path.length - 1) this.path = this.path + 1;
+      ingredients.render(path[this.path].image, path[this.path].title);
     });
   }
 }
