@@ -29,10 +29,14 @@ class MainContainer {
     }
 
     const btn = document.getElementById("searchButton");
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", async () => {
       let url = `https://cors-anywhere.herokuapp.com/http://api.nongsaro.go.kr/service/monthFd/monthFdmtLst?apiKey=202303061MOHKXNQUQY72RTDRDBJGA&thisYear=${yearTitle.innerText}&thisMonth=${monthTitle.innerText}`;
-      const ret = getData("GET", url);
-      console.log(ret);
+      try {
+        const ret = await getData("GET", url);
+        console.log(ret);
+      } catch (error) {
+        console.log(error);
+      }
     });
   }
 }

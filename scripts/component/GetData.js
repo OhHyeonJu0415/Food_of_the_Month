@@ -1,4 +1,4 @@
-export function getData(requestType, urlLink) {
+export async function getData(requestType, urlLink) {
   //XMLHttpRequest 객체 생성
   var xhr = new XMLHttpRequest();
 
@@ -7,17 +7,19 @@ export function getData(requestType, urlLink) {
   xhr.send();
 
   //Callback
-  xhr.onload = () => {
-    if (xhr.status == 200) {
-      let XmlNode = new DOMParser().parseFromString(xhr.response, "text/xml");
-      let ret = xmlToJson(XmlNode).response.body.items.item;
-      console.log(ret);
-      return ret;
-    } else {
-      //failed
-      // callbackF();
-    }
-  };
+  return new Promise((resolve) => {
+    xhr.onload = () => {
+      if (xhr.status == 200) {
+        //success
+        let XmlNode = new DOMParser().parseFromString(xhr.response, "text/xml");
+        let ret = xmlToJson(XmlNode).response.body.items.item;
+        return resolve(ret);
+      } else {
+        //failed
+        return resolve("error!");
+      }
+    };
+  });
 }
 
 function xmlToJson(xml) {
