@@ -212,7 +212,8 @@
   justify-content: space-between;
 }
 
-#foodSubTitle {
+#foodSubTitle,
+#foodName {
   font-weight: 700;
   font-size: 20px;
 }
@@ -227,6 +228,7 @@
   margin: 40px auto;
   justify-content: center;
   align-items: center;
+  user-select: none;
 }
 
 .cursor-point {
