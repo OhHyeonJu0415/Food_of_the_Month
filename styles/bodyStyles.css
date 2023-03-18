@@ -370,3 +370,12 @@ td {
 .disPlayNone {
   display: none;
 }
+
+#alertRecipe {
+  height: 16vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  color: rgb(71, 71, 71);
+}
