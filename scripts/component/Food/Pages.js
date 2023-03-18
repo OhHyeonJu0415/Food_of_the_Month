@@ -28,6 +28,14 @@ class Pages {
     divRoot.appendChild(img);
     divRoot.appendChild(div);
 
+    divRoot.addEventListener("click", () => {
+      window.scrollTo({
+        left: 0,
+        top: window.innerHeight * 2,
+        behavior: "smooth",
+      });
+    });
+
     root.appendChild(divRoot);
   };
 }

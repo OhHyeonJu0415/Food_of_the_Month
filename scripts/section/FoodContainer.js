@@ -36,7 +36,11 @@ class FoodContainer {
         foot.classList.remove("disPlayNone");
         lineSpace[0].classList.remove("disPlayNone");
         recipe.classList.remove("disPlayNone");
-        window.scrollTo({ left: 0, top: screen.height, behavior: "smooth" });
+        window.scrollTo({
+          left: 0,
+          top: window.innerHeight,
+          behavior: "smooth",
+        });
 
         //이미지 경로 및 제목 가공
         const path = await setPath(this.$foodData);
