@@ -15,7 +15,7 @@ class MainContainer {
     const months = document.getElementsByClassName("months");
     const monthTitle = document.getElementById("monthTitle");
 
-    monthTitle.innerHTML = "1";
+    monthTitle.innerHTML = "01";
 
     for (let i = 0; i < 6; i++) {
       years[i].addEventListener("click", () => {
@@ -25,7 +25,11 @@ class MainContainer {
 
     for (let i = 0; i < 12; i++) {
       months[i].addEventListener("click", () => {
-        monthTitle.innerText = months[i].innerText;
+        if (months[i].innerText.length == 1) {
+          monthTitle.innerText = `0${months[i].innerText}`;
+        } else {
+          monthTitle.innerText = months[i].innerText;
+        }
       });
     }
 
