@@ -22,6 +22,10 @@ class FoodContainer {
 
         const root = document.querySelector("#foodContainer");
         const line = document.getElementsByClassName("boldLine");
+        const foot = document.querySelector("#footer");
+        const lineSpace = document.getElementsByClassName("lineSpace");
+        const recipe = document.querySelector("#recipeContainer");
+
         const date = document.getElementById("foodDate");
         //타이틀
         date.innerText = `${this.$year}년 ${this.$month}월`;
@@ -29,6 +33,9 @@ class FoodContainer {
         //푸드페이지쪽으로 이동
         root.classList.remove("disPlayNone");
         line[0].classList.remove("disPlayNone");
+        foot.classList.remove("disPlayNone");
+        lineSpace[0].classList.remove("disPlayNone");
+        recipe.classList.remove("disPlayNone");
         window.scrollTo({ left: 0, top: screen.height, behavior: "smooth" });
 
         //이미지 경로 및 제목 가공
@@ -39,9 +46,10 @@ class FoodContainer {
         const foods = new Foods(path);
         foods.render();
 
-        if (this.$recipeData === undefined || this.$recipeData === null) {
+        if (this.$recipeData === undefined || this.$recipeData !== null) {
           //레시피 조회 정보 없음
           const noRecipe = document.getElementById("alertRecipe");
+          noRecipe.classList.remove("disPlayNone");
           noRecipe.innerText = `${this.$year}년 ${this.$month}월에는 조회 가능한 레시피가 없습니다.`;
         } else {
           //레시피 있음

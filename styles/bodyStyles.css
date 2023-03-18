@@ -251,9 +251,10 @@
   justify-content: space-between;
   align-items: center;
   width: 40vw;
+  padding-bottom: 10px;
 }
 
-#card {
+.card {
   width: 30%;
   height: 16vw;
   border-radius: 20px;
@@ -262,17 +263,19 @@
   text-align: center;
   font-size: 16px;
   font-weight: 500;
+  margin: auto;
 }
 
-#recipePic {
+.recipePic {
   margin: 7% 0;
   width: 86%;
-  height: 70%;
+  height: 75%;
   border-radius: 20px;
   background-color: rgb(230, 230, 230);
+  object-fit: cover;
 }
 
-#recipeTitle {
+.recipeTitle {
   width: 86%;
   margin: auto;
 }
@@ -368,7 +371,7 @@ td {
 }
 
 .disPlayNone {
-  display: none;
+  display: none !important;
 }
 
 #alertRecipe {
@@ -378,4 +381,20 @@ td {
   justify-content: center;
   margin: auto;
   color: rgb(71, 71, 71);
+}
+
+#recipePage {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--color-main);
+}
+
+.page {
+  margin: 0 12px;
+  font-weight: 400;
+  cursor: pointer;
 }
