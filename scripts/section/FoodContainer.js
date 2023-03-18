@@ -20,12 +20,9 @@ class FoodContainer {
         const ret = await getData("GET", url);
         this.$recipeData = ret;
 
-        //이미지 경로 및 제목 가공
-        const path = setPath();
         const root = document.querySelector("#foodContainer");
         const line = document.getElementsByClassName("boldLine");
         const date = document.getElementById("foodDate");
-
         //타이틀
         date.innerText = `${this.$year}년 ${this.$month}월`;
 
@@ -33,6 +30,10 @@ class FoodContainer {
         root.classList.remove("disPlayNone");
         line[0].classList.remove("disPlayNone");
         window.scrollTo({ left: 0, top: screen.height, behavior: "smooth" });
+
+        //이미지 경로 및 제목 가공
+        const path = await setPath(this.$foodData);
+        const pathRecipe = await setPath(this.$recipeData);
 
         //식재료 부분 렌더링
         const foods = new Foods(path);
@@ -45,7 +46,7 @@ class FoodContainer {
         } else {
           //레시피 있음
           //레피시 부분 렌더링
-          const recipes = new Recipes();
+          const recipes = new Recipes(pathRecipe);
           recipes.render();
         }
       } catch (error) {
