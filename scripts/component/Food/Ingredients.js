@@ -3,6 +3,7 @@ class Ingredients {
 
   render(path, name) {
     const image = document.getElementById("foodIngredients");
+    image.setAttribute("src", "");
     image.setAttribute("alt", "음식사진");
     image.setAttribute("src", path);
     image.style.width = "100%";
