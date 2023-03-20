@@ -304,6 +304,7 @@
 #mainRecipePic {
   width: 100%;
   height: 85%;
+  cursor: pointer;
 }
 
 #subRecipePic {
@@ -314,6 +315,7 @@
   white-space: nowrap;
   overflow: auto;
   overflow-y: hidden;
+  cursor: pointer;
 }
 
 #subRecipePic::-webkit-scrollbar {
