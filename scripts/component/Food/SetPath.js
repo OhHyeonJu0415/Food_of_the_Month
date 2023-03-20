@@ -22,16 +22,29 @@ export async function setPath(data) {
     });
   }
 
+  // const path = [
+  //   {
+  //     number: "204630",
+  //     image: "../../images/mainPic.png",
+  //     title: "테스트1",
+  //   },
+  //   { number: "204630", image: "../../images/logo.png", title: "테스트2" },
+  //   { number: "204630", image: "../../images/test1.jpg", title: "테스트3" },
+  //   { number: "204630", image: "../../images/test1.jpg", title: "테스트3" },
+  //   { number: "204630", image: "../../images/logo.png", title: "테스트2" },
+  // ];
+
   return new Promise((resolve) => {
+    // console.log(path);
     return resolve(path);
   });
 }
 
 function findImage(data, check) {
   if (check) {
-    let number = data.rtnImgSeCode["#cdata-section"].split("|");
-    let fileCours = data.rtnFileCours["#cdata-section"].split("|");
-    let fileName = data.rtnStreFileNm["#cdata-section"].split("|");
+    let number = splitData(data.rtnImgSeCode);
+    let fileCours = splitData(data.rtnFileCours);
+    let fileName = splitData(data.rtnStreFileNm);
 
     for (let i = 0; i < number.length; i++) {
       if (number[i] === "209006") {
@@ -43,4 +56,8 @@ function findImage(data, check) {
   } else {
     return `${base}${data.rtnFileCours["#cdata-section"]}/${data.rtnStreFileNm["#cdata-section"]}`;
   }
+}
+
+export function splitData(data) {
+  return data["#cdata-section"].split("|");
 }

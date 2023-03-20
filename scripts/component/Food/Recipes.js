@@ -1,4 +1,5 @@
 import Pages from "./Pages.js";
+import RecipeContainer from "../../section/RecipeContainer.js";
 
 class Recipes {
   constructor($data) {
@@ -10,7 +11,6 @@ class Recipes {
     //현재 페이지는 다시 렌더링할 필요없다
     if (data === this.page) return;
     const pages = new Pages();
-    // if (this.page != 0) pages.removeElement();
 
     this.page = data;
     let start = (this.page - 1) * 3;
@@ -27,6 +27,9 @@ class Recipes {
 
   makePages() {
     const root = document.getElementById("recipePage");
+    while (root.firstChild) {
+      root.removeChild(root.firstChild);
+    }
     let size = this.$data.length / 3;
 
     if (this.$data.length % 3 != 0) {
@@ -49,6 +52,10 @@ class Recipes {
 
   render() {
     this.makePages();
+
+    //레시피 정보 초기화
+    const recipeContainer = new RecipeContainer(this.$data[0]);
+    recipeContainer.render();
   }
 }
 

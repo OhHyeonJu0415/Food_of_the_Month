@@ -1,4 +1,6 @@
-export async function getData(requestType, urlLink) {
+export async function getData(requestType, urlLink, checkItems = true) {
+  // return null;
+
   //XMLHttpRequest 객체 생성
   var xhr = new XMLHttpRequest();
 
@@ -12,11 +14,14 @@ export async function getData(requestType, urlLink) {
       if (xhr.status == 200) {
         //success
         let XmlNode = new DOMParser().parseFromString(xhr.response, "text/xml");
-        let ret = xmlToJson(XmlNode).response.body.items.item;
+        let ret;
+        if (checkItems) ret = xmlToJson(XmlNode).response.body.items.item;
+        else ret = xmlToJson(XmlNode).response.body.item;
+        console.log(ret);
         return resolve(ret);
       } else {
         //failed
-        return resolve("error!");
+        return null;
       }
     };
   });

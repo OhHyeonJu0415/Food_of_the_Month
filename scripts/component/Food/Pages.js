@@ -1,3 +1,5 @@
+import RecipeContainer from "../../section/RecipeContainer.js";
+
 class Pages {
   constructor() {}
 
@@ -29,6 +31,9 @@ class Pages {
     divRoot.appendChild(div);
 
     divRoot.addEventListener("click", () => {
+      const recipeContainer = new RecipeContainer(data);
+      recipeContainer.render();
+
       window.scrollTo({
         left: 0,
         top: window.innerHeight * 2,
