@@ -13,6 +13,8 @@ export async function setPath(data) {
       continue;
     }
 
+    if (!check && path.length >= 3) break;
+
     path.push({
       number: data[i].cntntsNo["#cdata-section"],
       image: findImage(data[i], check),
@@ -54,6 +56,12 @@ function findImage(data, check) {
     }
     return `${base}${fileCours[0]}/${fileName[0]}`;
   } else {
+    let fileCours = splitData(data.rtnFileCours);
+    let fileName = splitData(data.rtnStreFileNm);
+
+    if (fileName.length >= 1) {
+      return `${base}${fileCours[0]}/${fileName[0]}`;
+    }
     return `${base}${data.rtnFileCours["#cdata-section"]}/${data.rtnStreFileNm["#cdata-section"]}`;
   }
 }
