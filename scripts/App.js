@@ -3,7 +3,7 @@ import MainContainer from "./section/MainContainer.js";
 class App {
   constructor($container) {
     this.$container = $container;
-    this.key = "202303061MOHKXNQUQY72RTDRDBJGA";
+    // this.key = "202303061MOHKXNQUQY72RTDRDBJGA";
     this.render();
   }
 

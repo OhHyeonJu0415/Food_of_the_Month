@@ -8,7 +8,7 @@ class RecipeContainer {
 
   render() {
     (async () => {
-      let url = `https://cors-anywhere.herokuapp.com/http://api.nongsaro.go.kr/service/monthFd/monthNewFdDtl?apiKey=202303061MOHKXNQUQY72RTDRDBJGA&cntntsNo=${this.$data.number}`;
+      let url = `https://cors-anywhere.herokuapp.com/http://api.nongsaro.go.kr/service/monthFd/monthNewFdDtl?apiKey=202303208FDHAUQ3LYKIWQD40JKNMA&cntntsNo=${this.$data.number}`;
       try {
         const ret = await getData("GET", url, false);
         if (ret === undefined || ret === null) {
