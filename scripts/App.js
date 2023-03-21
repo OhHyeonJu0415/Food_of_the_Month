@@ -8,7 +8,7 @@ class App {
   }
 
   render() {
-    nongsaroOpenApiRequest.apiKey = this.key; //발급 받은 인증키
+    nongsaroOpenApiRequest.apiKey = "202303208FDHAUQ3LYKIWQD40JKNMA"; //발급 받은 인증키
     nongsaroOpenApiRequest.serviceName = "monthFd";
     nongsaroOpenApiRequest.operationName = "monthFdYearLst";
     nongsaroOpenApiRequest.thisYear = "2020"; //초기값 년도 셋팅
