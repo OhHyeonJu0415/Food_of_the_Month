@@ -14,7 +14,7 @@
 
 
 ## :triangular_flag_on_post: 프로젝트 설명
-* 연도/월을 선택하면 해당 날짜의 대표적인 식재료와 레시피를 볼 수 있습니다.
+* 년도/월을 선택하면 해당 날짜의 대표적인 식재료와 레시피를 볼 수 있습니다.
 * 농사로에서 제공하는 공공데이터를 활용하였습니다.
 * 프레임워크, 라이브러리 없이 
 __HTML, 순수 CSS__
@@ -42,6 +42,15 @@ __순수 JS__
 ---
 
 ## :tv: 실행 화면
+1. 년도와 월을 선택 후 Go 버튼을 누르면 스크롤이 생기면서 자동으로 아래쪽으로 이동합니다.
+<img width="100%" src="https://user-images.githubusercontent.com/71424881/234193295-5415b655-93e1-46b5-8245-3be42dcbe952.png"/>
+
+2. 식재료 부분과 레시피 부분이 나뉘어져 나타납니다. 식재료는 화살표로, 레시피는 페이지 번호로 이동하며 확인할 수 있습니다.
+<img width="100%" src="https://user-images.githubusercontent.com/71424881/234194526-c997ace8-7b6c-41b1-9484-13b8087180f5.png"/>
+
+3. 위 화면이 나타남과 동시에 아래에는 첫번째 레시피 상세보기 내용으로 초기화 됩니다. 레시피 카드를 누르면 다른 레시피를 볼 수 있습니다.
+<img width="100%" src="https://user-images.githubusercontent.com/71424881/234194543-67282348-4587-4c84-b60b-9dbbcf72543b.png"/>
+<img width="100%" src="https://user-images.githubusercontent.com/71424881/234194550-f179fa7a-3a01-48b0-a3a7-1e3880b92739.png"/>
 
 
 
